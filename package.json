@@ -1,0 +1,34 @@
+{
+  "name": "web-text2hatena-converter",
+  "version": "1.0.0",
+  "main": "dist/index.html",
+  "repository": "ssh://git@github.com/c18t/web-text2hatena-converter.git",
+  "author": "Uchi <u@chimata.org>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack --run-dev",
+    "prod": "webpack --run-prod",
+    "watch:dev": "yarn dev --watch",
+    "watch:prod": "yarn prod --watch",
+    "serve": "browser-sync start --server dist/ --files dist/*",
+    "serve:dev": "npm-run-all -p watch:dev serve",
+    "serve:prod": "npm-run-all -p watch:prod serve"
+  },
+  "dependencies": {
+    "vue": "^2.5.16",
+    "vue-property-decorator": "^7.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "css-loader": "^1.0.0",
+    "npm-run-all": "^4.1.3",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "ts-loader": "^4.4.2",
+    "typescript": "^2.9.2",
+    "vue-loader": "^15.2.4",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.16.0",
+    "webpack-command": "^0.4.1"
+  }
+}
