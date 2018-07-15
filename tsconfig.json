@@ -1,6 +1,10 @@
 {
   "include": [
-    "./src/**/*"
+    "./src/**/*.ts",
+    "./src/**/*.vue"
+  ],
+  "exclude": [
+    "node_modules"
   ],
   "compilerOptions": {
     /* Basic Options */

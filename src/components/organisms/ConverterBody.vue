@@ -1,8 +1,8 @@
 <template>
   <div>
-    <language-selector />
-    <convert-button />
-    <convert-field />
+    <language-selector v-model="selectedLangage" />
+    <convert-button v-on:click="convert" text="Convert" />
+    <convert-field v-model="convertData" />
   </div>
 </template>
 
@@ -24,7 +24,10 @@ import ConvertField from '../molecules/ConvertField.vue'
   }
 })
 export class ConverterBody extends Vue {
-  
+  @Prop(String) selectedLangage!: string
+  @Prop(String) convertData!: string
+
+  convert(e: any) { console.log(e) }
 }
 export default ConverterBody
 </script>

@@ -24,5 +24,4 @@ export class ConverterFooter extends Vue {
 
 }
 export default ConverterFooter
-
 </script>

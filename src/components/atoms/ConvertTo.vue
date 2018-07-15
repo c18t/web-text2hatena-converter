@@ -13,5 +13,4 @@ export class ConvertTo extends Vue {
 
 }
 export default ConvertTo
-
 </script>

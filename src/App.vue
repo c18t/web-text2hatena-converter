@@ -32,6 +32,5 @@ import Converter from './components/pages/Converter.vue'
 export class App extends Vue {
   
 }
-
 export default App
 </script>
