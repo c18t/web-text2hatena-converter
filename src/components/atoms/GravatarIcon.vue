@@ -11,7 +11,6 @@ import { Vue, Component, Prop } from 'vue-property-decorator'
 
 @Component
 export class GravatarIcon extends Vue {
-
 }
 export default GravatarIcon
 </script>

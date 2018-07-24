@@ -2,7 +2,7 @@
   <div>
     <language-selector v-model="selectedLangage" />
     <convert-button v-on:click="convert" text="Convert" />
-    <convert-field v-model="convertData" />
+    <converter-field v-model="convertData" />
   </div>
 </template>
 
@@ -11,23 +11,27 @@
 </style>
 
 <script lang="ts">
-import { Vue, Component, Prop } from 'vue-property-decorator'
+import { Vue, Component, Prop, Provide } from 'vue-property-decorator'
 import LanguageSelector from '../organisms/LanguageSelector.vue'
 import ConvertButton from '../molecules/ConvertButton.vue'
-import ConvertField from '../molecules/ConvertField.vue'
+import ConverterField from '../molecules/ConvertField.vue'
 
 @Component({
   components: {
     LanguageSelector,
     ConvertButton,
-    ConvertField,
+    ConverterField,
   }
 })
 export class ConverterBody extends Vue {
   @Prop(String) selectedLangage!: string
-  @Prop(String) convertData!: string
+  @Prop(ConverterField) convertData!: ConverterField
 
-  convert(e: any) { console.log(e) }
+  convert(e: any) {
+    if (this.convertData === undefined) return
+    console.log(this.convertData.convertFrom)
+    console.log(this.convertData.convertTo)
+  }
 }
 export default ConverterBody
 </script>
