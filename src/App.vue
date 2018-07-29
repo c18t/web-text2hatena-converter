@@ -87,6 +87,7 @@
 
 footer {
   text-align: center
+  font-style: normal
 }
 </style>
 
