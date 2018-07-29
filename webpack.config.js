@@ -58,6 +58,14 @@ module.exports = {
           'stylus-loader',
         ],
       },
+      {
+        // cssの設定
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
+      },
     ],
   },
 
