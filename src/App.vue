@@ -30,6 +30,15 @@
         <p>Hatena notation</p>
       </b-col>
     </b-form-row>
+
+    <footer>
+      <address>
+        <a href="https://twitter.com/c18t">
+          <img src="http://www.gravatar.com/avatar/f10db4ff5ff2ed06a41b2cc37b968b01?s=20" style="width: 20px" />
+          @c18t
+        </a>
+      </address>
+    </footer>
   </div>
 </template>
 
@@ -75,6 +84,10 @@
     line-height: 1.2;
   }
 }
+
+footer {
+  text-align: center
+}
 </style>
 
 <script lang="ts">
@@ -99,7 +112,7 @@ export class App extends Vue {
   textAreaStyle: string = ''
 
   mounted() {
-    this.textAreaStyle = `height: ${window.innerHeight-250}px`
+    this.textAreaStyle = `height: ${window.innerHeight-280}px`
 
     const from = document.getElementById('convert_from')
     if (from) {
